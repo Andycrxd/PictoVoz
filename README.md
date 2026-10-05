@@ -1,8 +1,45 @@
-# CIMA Prototype
+# PictoVoz
 
-Prototipo funcional de una aplicación de Comunicación Aumentativa y Alternativa
-(CAA) para tablet Android, desarrollado en Kotlin con Jetpack Compose y Material 3.
+PictoVoz es una aplicación Android de Comunicación Aumentativa y Alternativa (CAA) diseñada para facilitar la comunicación mediante pictogramas y síntesis de voz.
 
+## ¿A quién está dirigida?
+
+La aplicación está pensada para personas que presentan dificultades para comunicarse mediante el habla, incluyendo:
+
+- Personas autistas.
+- Personas con dificultades del habla.
+- Personas con discapacidad de comunicación.
+- Personas que requieren apoyo temporal o permanente para expresarse.
+
+## Características
+
+- Construcción de frases mediante pictogramas.
+- Límite de 5 pictogramas por frase.
+- Síntesis de voz en español.
+- Categorías de pictogramas.
+- Frases rápidas de un toque.
+- Eliminación individual de pictogramas.
+- Opción para borrar toda la frase.
+- Reproducción de la última frase.
+- Interfaz adaptada para tablet Android.
+- Funcionamiento sin conexión a Internet durante el uso.
+
+## Tecnologías
+
+- Kotlin
+- Android
+- Jetpack Compose
+- Material 3
+- Android Text-to-Speech
+- Arquitectura MVVM
+
+## Estado del proyecto
+
+Prototipo funcional desarrollado para una aplicación de Comunicación Aumentativa y Alternativa (CAA).
+
+## Captura de la aplicación
+
+La aplicación permite seleccionar pictogramas, construir frases y reproducirlas mediante síntesis de voz.
 ## Qué incluye
 
 - Barra superior de construcción de frase con límite de 5 pictogramas.
