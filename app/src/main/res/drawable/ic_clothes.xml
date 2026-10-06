@@ -1,0 +1,29 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Cuerpo de la Camiseta (Azul) -->
+    <path
+        android:fillColor="#1E88E5"
+        android:pathData="M6,8L2,10L3.5,14L6,13V21H18V13L20.5,14L22,10L18,8C17,9.5 15,10.5 12,10.5C9,10.5 7,9.5 6,8Z"/>
+
+    <!-- Cuello (Azul Oscuro) -->
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M8,4C8,4 9.5,7 12,7C14.5,7 16,4 16,4L18,8C17,9.5 15,10.5 12,10.5C9,10.5 7,9.5 6,8L8,4Z"/>
+
+    <!-- Dobladillos/Detalles de Mangas -->
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M2,10L3.5,14L5,13.4L3.8,10H2Z"/>
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M22,10L20.5,14L19,13.4L20.2,10H22Z"/>
+
+    <!-- Estampado central (Estrella amarilla) -->
+    <path
+        android:fillColor="#FFCA28"
+        android:pathData="M12,12L12.9,13.8L14.9,14.1L13.5,15.5L13.8,17.5L12,16.6L10.2,17.5L10.5,15.5L9.1,14.1L11.1,13.8L12,12Z"/>
+</vector>

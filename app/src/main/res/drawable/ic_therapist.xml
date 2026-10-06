@@ -1,11 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="96dp"
-    android:height="96dp"
-    android:viewportWidth="24"
-    android:viewportHeight="24">
-    <path android:fillColor="#F0FDF4" android:pathData="M2,2h20v20H2z" />
-    <path android:fillColor="#16A34A" android:pathData="M8,7a4,4 0,1 0,8 0a4,4 0,0 0,-8 0z" />
-    <path android:fillColor="#86EFAC" android:pathData="M5,22c0,-4 3,-6 7,-6s7,2 7,6z" />
-    <path android:fillColor="#FFFFFF" android:pathData="M10.8,16h2.4v2h2v2.2h-2v2h-2.4v-2h-2v-2.2h2z" />
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Cuerpo y Bata -->
+    <path
+        android:fillColor="#ECEFF1"
+        android:pathData="M32,100 C32,82 46,78 64,78 C82,78 96,82 96,100 V120 H32 Z"/>
+
+    <!-- Camisa Azul Interior -->
+    <path
+        android:fillColor="#64B5F6"
+        android:pathData="M54,80 H74 V105 H54 Z"/>
+
+    <!-- Orejas -->
+    <path
+        android:fillColor="#C89466"
+        android:pathData="M30,50 C30,46 36,46 36,50 V60 C36,64 30,64 30,60 Z"/>
+    <path
+        android:fillColor="#C89466"
+        android:pathData="M92,50 C92,46 98,46 98,50 V60 C98,64 92,64 92,60 Z"/>
+
+    <!-- Cabeza (Tono de piel del abuelo) -->
+    <path
+        android:fillColor="#D7A77D"
+        android:pathData="M38,52 C38,36 48,26 64,26 C80,26 90,36 90,52 C90,68 80,78 64,78 C48,78 38,68 38,52 Z"/>
+
+    <!-- Cabello Castaño -->
+    <path
+        android:fillColor="#4E342E"
+        android:pathData="M38,48 C36,36 44,22 64,22 C84,22 92,36 90,48 C86,32 78,28 64,28 C50,28 42,32 38,48 Z"/>
+
+    <!-- Cejas -->
+    <path
+        android:fillColor="#4E342E"
+        android:pathData="M48,42 C51,40 55,40 58,42 V44 C55,42 51,42 48,44 Z"/>
+    <path
+        android:fillColor="#4E342E"
+        android:pathData="M70,42 C73,40 77,40 80,42 V44 C77,42 73,42 70,44 Z"/>
+
+    <!-- Ojos -->
+    <path
+        android:fillColor="#37474F"
+        android:pathData="M51,52 C51,49 55,49 55,52 C55,55 51,55 51,52 Z"/>
+    <path
+        android:fillColor="#37474F"
+        android:pathData="M73,52 C73,49 77,49 77,52 C77,55 73,55 73,52 Z"/>
+
+    <!-- Nariz -->
+    <path
+        android:fillColor="#C89466"
+        android:pathData="M61,57 C61,55 67,55 67,57 C67,59 61,59 61,57 Z"/>
+
+    <!-- Sonrisa -->
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M54,63 C58,68 70,68 74,63 C70,70 58,70 54,63 Z"/>
+
+    <!-- Estetoscopio (Manga Azul) -->
+    <path
+        android:fillColor="#00B0FF"
+        android:pathData="M42,80 C42,97 54,104 64,104 C74,104 86,97 86,80 H81 C81,93 72,99 64,99 C56,99 47,93 47,80 Z"/>
+
+    <!-- Estetoscopio (Campana) -->
+    <path
+        android:fillColor="#424242"
+        android:pathData="M80,92 C80,87 88,87 88,92 C88,97 80,97 80,92 Z"/>
 </vector>

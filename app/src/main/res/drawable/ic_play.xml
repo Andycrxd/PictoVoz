@@ -1,9 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="96dp"
     android:height="96dp"
     android:viewportWidth="24"
     android:viewportHeight="24">
-    <path android:fillColor="#FFFBEB" android:pathData="M2,2h20v20H2z" />
-    <path android:fillColor="#F59E0B" android:pathData="M7,5l12,7l-12,7z" />
+
+    <!-- Sombra / Base inferior del mando -->
+    <path
+        android:fillColor="#37474F"
+        android:pathData="M6,6C3.8,6 2,7.8 2,10V15C2,17.8 4.2,20 7,20C8.5,20 9.8,19.3 10.7,18.2L12,16.5L13.3,18.2C14.2,19.3 15.5,20 17,20C19.8,20 22,17.8 22,15V10C22,7.8 20.2,6 18,6H6Z"/>
+
+    <!-- Cuerpo principal del mando (Azul metálico/vívido) -->
+    <path
+        android:fillColor="#1E88E5"
+        android:pathData="M6,7C4.3,7 3,8.3 3,10V14.5C3,17 5,19 7.5,19C8.8,19 9.9,18.4 10.7,17.4L12,15.7L13.3,17.4C14.1,18.4 15.2,19 16.5,19C19,19 21,17 21,14.5V10C21,8.3 19.7,7 18,7H6Z"/>
+
+    <!-- D-Pad / Cruceta izquierda (Gris oscuro) -->
+    <path
+        android:fillColor="#263238"
+        android:pathData="M6.5,9.5H8.5V11.5H10.5V13.5H8.5V15.5H6.5V13.5H4.5V11.5H6.5V9.5Z"/>
+
+    <!-- Botones de acción derechos (Cuatro botones de colores) -->
+    <!-- Botón Superior (Verde) -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M16.5,9.5C15.9,9.5 15.5,9.9 15.5,10.5C15.5,11.1 15.9,11.5 16.5,11.5C17.1,11.5 17.5,11.1 17.5,10.5C17.5,9.9 17.1,9.5 16.5,9.5Z"/>
+    <!-- Botón Inferior (Rojo) -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M16.5,13.5C15.9,13.5 15.5,13.9 15.5,14.5C15.5,15.1 15.9,15.5 16.5,15.5C17.1,15.5 17.5,15.1 17.5,14.5C17.5,13.9 17.1,13.5 16.5,13.5Z"/>
+    <!-- Botón Izquierdo (Amarillo) -->
+    <path
+        android:fillColor="#FFCA28"
+        android:pathData="M14.5,11.5C13.9,11.5 13.5,11.9 13.5,12.5C13.5,13.1 13.9,13.5 14.5,13.5C15.1,13.5 15.5,13.1 15.5,12.5C15.5,11.9 15.1,11.5 14.5,11.5Z"/>
+    <!-- Botón Derecho (Azul claro) -->
+    <path
+        android:fillColor="#29B6F6"
+        android:pathData="M18.5,11.5C17.9,11.5 17.5,11.9 17.5,12.5C17.5,13.1 17.9,13.5 18.5,13.5C19.1,13.5 19.5,13.1 19.5,12.5C19.5,11.9 19.1,11.5 18.5,11.5Z"/>
+
+    <!-- Detalle central / Luces led -->
+    <path
+        android:fillColor="#ECEFF1"
+        android:pathData="M11,10H13V11H11V10ZM11,12H13V13H11V12Z"/>
 </vector>

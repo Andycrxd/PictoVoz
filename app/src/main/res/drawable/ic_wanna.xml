@@ -1,0 +1,45 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Manga de la camisa (Base roja) -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M2,13H6V21H2V13Z"/>
+
+    <!-- Muñeca -->
+    <path
+        android:fillColor="#FFB74D"
+        android:pathData="M6,14H9V20H6V14Z"/>
+
+    <!-- Palma de la mano (Base extendedida) -->
+    <path
+        android:fillColor="#FFB74D"
+        android:pathData="M8,16H18C19.1,16 20,16.9 20,18V19C20,20.1 19.1,21 18,21H8V16Z"/>
+
+    <!-- Dedos delineados y alineados -->
+    <!-- Pulgar hacia arriba / inclinado -->
+    <path
+        android:fillColor="#FFA726"
+        android:pathData="M8,14C8,12.9 8.9,12 10,12C11.1,12 12,12.9 12,14V16H8V14Z"/>
+
+    <!-- Dedos de la palma (Índice, Medio, Anular, Meñique) -->
+    <path
+        android:fillColor="#FFA726"
+        android:pathData="M18,16.5C18.8,16.5 19.5,17.2 19.5,18C19.5,18.8 18.8,19.5 18,19.5H12V16.5H18Z"/>
+
+    <!-- Objeto deseado recibiéndose en la mano (Estrella de deseo brillante) -->
+    <path
+        android:fillColor="#FFCA28"
+        android:pathData="M13,3L14.2,5.8L17.2,6.1L14.9,8.1L15.6,11L13,9.5L10.4,11L11.1,8.1L8.8,6.1L11.8,5.8L13,3Z"/>
+
+    <!-- Destellos de luz sobre la estrella -->
+    <path
+        android:fillColor="#4FC3F7"
+        android:pathData="M6,4C6,3.4 5.6,3 5,3C4.4,3 4,3.4 4,4C4,4.6 4.4,5 5,5C5.6,5 6,4.6 6,4Z"/>
+    <path
+        android:fillColor="#4FC3F7"
+        android:pathData="M21,7C21,6.4 20.6,6 20,6C19.4,6 19,6.4 19,7C19,7.6 19.4,8 20,8C20.6,8 21,7.6 21,7Z"/>
+</vector>

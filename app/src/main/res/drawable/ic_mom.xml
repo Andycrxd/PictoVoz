@@ -1,11 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="96dp"
     android:height="96dp"
     android:viewportWidth="24"
     android:viewportHeight="24">
-    <path android:fillColor="#FFF7ED" android:pathData="M2,2h20v20H2z" />
-    <path android:fillColor="#C2410C" android:pathData="M6,9a6,6 0,1 0,12 0a6,6 0,0 0,-12 0z" />
-    <path android:fillColor="#FED7AA" android:pathData="M8,10a4,4 0,1 0,8 0a4,4 0,0 0,-8 0z" />
-    <path android:fillColor="#EC4899" android:pathData="M5,22c0,-4 3,-6 7,-6s7,2 7,6z" />
+
+    <!-- Cabello largo/medio -->
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M12,2 C6.5,2 3.5,6 3.5,12 C3.5,17 4.5,20 5.5,21 C6,15 7.5,7 12,7 C16.5,7 18,15 18.5,21 C19.5,20 20.5,17 20.5,12 C20.5,6 17.5,2 12,2 Z"/>
+
+    <!-- Orejas -->
+    <path
+        android:fillColor="#D7A172"
+        android:pathData="M4.5,13 C4.5,12 5.5,11 5.5,11 V15 C5.5,15 4.5,14 4.5,13 Z"/>
+    <path
+        android:fillColor="#D7A172"
+        android:pathData="M19.5,13 C19.5,12 18.5,11 18.5,11 V15 C18.5,15 19.5,14 19.5,13 Z"/>
+
+    <!-- Rostro -->
+    <path
+        android:fillColor="#F5D0A9"
+        android:pathData="M12,7 C8,7 6,10 6,14 C6,18.5 8.5,22 12,22 C15.5,22 18,18.5 18,14 C18,10 16,7 12,7 Z"/>
+
+    <!-- Cejas delgadas -->
+    <path
+        android:fillColor="#4E342E"
+        android:pathData="M7,11 C8.5,10.3 10,11 10,11.3 C10,11.6 8.3,11.1 7,11.5 C6.7,11.6 6.7,11.1 7,11 Z"/>
+    <path
+        android:fillColor="#4E342E"
+        android:pathData="M17,11 C15.5,10.3 14,11 14,11.3 C14,11.6 15.7,11.1 17,11.5 C17.3,11.6 17.3,11.1 17,11 Z"/>
+
+    <!-- Ojos -->
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M8.5,12.5 C9.33,12.5 10,13.17 10,14 C10,14.83 9.33,15.5 8.5,15.5 C7.67,15.5 7,14.83 7,14 C7,13.17 7.67,12.5 8.5,12.5 Z"/>
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M15.5,12.5 C16.33,12.5 17,13.17 17,14 C17,14.83 16.33,15.5 15.5,15.5 C14.67,15.5 14,14.83 14,14 C14,13.17 14.67,12.5 15.5,12.5 Z"/>
+
+    <!-- Nariz -->
+    <path
+        android:fillColor="#D7A172"
+        android:pathData="M11.5,16 C11.8,15.6 12.2,15.6 12.5,16 C12.8,16.3 12.3,16.6 12,16.4 C11.7,16.6 11.2,16.3 11.5,16 Z"/>
+
+    <!-- Sonrisa -->
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M9,18 C10.5,19.5 13.5,19.5 15,18 C15.4,17.6 15.8,18.1 15.4,18.5 C13.5,20.5 10.5,20.5 8.6,18.5 C8.2,18.1 8.6,17.6 9,18 Z"/>
 </vector>

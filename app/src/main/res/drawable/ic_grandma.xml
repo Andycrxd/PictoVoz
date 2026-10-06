@@ -1,0 +1,71 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Moño superior de la abuela -->
+    <path
+        android:fillColor="#9E9E9E"
+        android:pathData="M8.5,4.5 C8.5,2.5 10,1 12,1 C14,1 15.5,2.5 15.5,4.5 Z"/>
+
+    <!-- Cabello cano contorno -->
+    <path
+        android:fillColor="#9E9E9E"
+        android:pathData="M12,3 C6.5,3 4,7 4,13 C4,14.5 4.5,16 5,17 C6,12 8.5,8 12,8 C15.5,8 18,12 19,17 C19.5,16 20,14.5 20,13 C20,7 17.5,3 12,3 Z"/>
+
+    <!-- Orejas -->
+    <path
+        android:fillColor="#F0C297"
+        android:pathData="M3.5,13.5 C3.5,12 4.5,11 4.5,11 V16 C4.5,16 3.5,15 3.5,13.5 Z"/>
+    <path
+        android:fillColor="#F0C297"
+        android:pathData="M20.5,13.5 C20.5,12 19.5,11 19.5,11 V16 C19.5,16 20.5,15 20.5,13.5 Z"/>
+
+    <!-- Rostro -->
+    <path
+        android:fillColor="#F5D0A9"
+        android:pathData="M12,8 C7.5,8 5,11 5,15 C5,19 8,22 12,22 C16,22 19,19 19,15 C19,11 16.5,8 12,8 Z"/>
+
+    <!-- Arrugas de la frente -->
+    <path
+        android:fillColor="#D7A172"
+        android:pathData="M9,9.5 C10.5,9 13.5,9 15,9.5 C15.3,9.6 15.2,10 14.8,10 C13.5,9.6 10.5,9.6 9.2,10 C8.8,10 8.7,9.6 9,9.5 Z"/>
+    <path
+        android:fillColor="#D7A172"
+        android:pathData="M8,11 C10,10.5 14,10.5 16,11 C16.3,11.1 16.2,11.5 15.8,11.5 C14,11 10,11 8.2,11.5 C7.8,11.5 7.7,11.1 8,11 Z"/>
+
+    <!-- Cejas canas -->
+    <path
+        android:fillColor="#9E9E9E"
+        android:pathData="M6.5,12.5 C8,11.8 10,12.5 10,13 C10,13.3 8,12.8 6.5,13.2 C6.2,13.3 6.2,12.6 6.5,12.5 Z"/>
+    <path
+        android:fillColor="#9E9E9E"
+        android:pathData="M17.5,12.5 C16,11.8 14,12.5 14,13 C14,13.3 16,12.8 17.5,13.2 C17.8,13.3 17.8,12.6 17.5,12.5 Z"/>
+
+    <!-- Ojos -->
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M8,14.5 C8.83,14.5 9.5,15.17 9.5,16 C9.5,16.83 8.83,17.5 8,17.5 C7.17,17.5 6.5,16.83 6.5,16 C6.5,15.17 7.17,14.5 8,14.5 Z"/>
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M16,14.5 C16.83,14.5 17.5,15.17 17.5,16 C17.5,16.83 16.83,17.5 16,17.5 C15.17,17.5 14.5,16.83 14.5,16 C14.5,15.17 15.17,14.5 16,14.5 Z"/>
+
+    <!-- Nariz -->
+    <path
+        android:fillColor="#D7A172"
+        android:pathData="M11,17.5 C11.5,17 12.5,17 13,17.5 C13.3,17.8 12.7,18.3 12,18 C11.3,18.3 10.7,17.8 11,17.5 Z"/>
+
+    <!-- Líneas de expresión (patas de gallo / ojeras) -->
+    <path
+        android:fillColor="#D7A172"
+        android:pathData="M6.5,17.5 C7.5,18 9,18 9.5,17.5 C9.8,17.2 9.4,16.8 9,17 C8.2,17.4 7.2,17.4 6.5,17 C6.1,16.8 5.8,17.2 6.5,17.5 Z"/>
+    <path
+        android:fillColor="#D7A172"
+        android:pathData="M17.5,17.5 C16.5,18 15,18 14.5,17.5 C14.2,17.2 14.6,16.8 15,17 C15.8,17.4 16.8,17.4 17.5,17 C17.9,16.8 18.2,17.2 17.5,17.5 Z"/>
+
+    <!-- Sonrisa -->
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M9,19.5 C10.5,21 13.5,21 15,19.5 C15.4,19.1 15.8,19.6 15.4,20 C13.5,22 10.5,22 8.6,20 C8.2,19.6 8.6,19.1 9,19.5 Z"/>
+</vector>

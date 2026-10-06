@@ -1,0 +1,40 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Pasta trasera (Roja) -->
+    <path
+        android:fillColor="#C62828"
+        android:pathData="M2,18.5C2,17 3.5,16 5.5,16H11.5V20H5.5C3.5,20 2,19.5 2,18.5Z"/>
+    <path
+        android:fillColor="#C62828"
+        android:pathData="M22,18.5C22,17 20.5,16 18.5,16H12.5V20H18.5C20.5,20 22,19.5 22,18.5Z"/>
+
+    <!-- Bloque de Páginas -->
+    <path
+        android:fillColor="#ECEFF1"
+        android:pathData="M3,6C3,6 6,5 11.5,7V18C6,16 3,17 3,17V6Z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M21,6C21,6 18,5 12.5,7V18C18,16 21,17 21,17V6Z"/>
+
+    <!-- Lomo del libro -->
+    <path
+        android:fillColor="#B71C1C"
+        android:pathData="M11.5,7H12.5V20.5H11.5Z"/>
+
+    <!-- Líneas de texto simuladas -->
+    <path
+        android:fillColor="#B0BEC5"
+        android:pathData="M5,9H9.5V10H5V9ZM5,11.5H9.5V12.5H5V11.5ZM5,14H8V15H5V14Z"/>
+    <path
+        android:fillColor="#CFD8DC"
+        android:pathData="M14.5,9H19V10H14.5V9ZM14.5,11.5H19V12.5H14.5V11.5ZM16,14H19V15H16V14Z"/>
+
+    <!-- Marcador de libro azul -->
+    <path
+        android:fillColor="#1E88E5"
+        android:pathData="M12,7L14,5V12L13,11L12,12V7Z"/>
+</vector>

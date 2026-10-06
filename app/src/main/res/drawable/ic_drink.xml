@@ -1,11 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="96dp"
     android:height="96dp"
     android:viewportWidth="24"
     android:viewportHeight="24">
-    <path android:fillColor="#F0F9FF" android:pathData="M2,2h20v20H2z" />
-    <path android:fillColor="#38BDF8" android:pathData="M8,5h8l-1,15H9z" />
-    <path android:fillColor="#FFFFFF" android:fillAlpha="0.7" android:pathData="M9,8h6l-0.4,5H9.4z" />
-    <path android:strokeColor="#0369A1" android:strokeWidth="1.3" android:strokeLineCap="round" android:fillColor="@android:color/transparent" android:pathData="M15,5l3,-3" />
+
+    <!-- Cabeza amarilla tipo emoji -->
+    <path
+        android:fillColor="#FFCA28"
+        android:pathData="M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2Z"/>
+
+    <!-- Ojos felices/guiñando (arcos) -->
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M6.5,9.5C6.5,8 8,7 9.5,8.5C9.8,8.8 9.3,9.3 9,9C8,8 7,8.5 7,9.5Z"/>
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M17.5,9.5C17.5,8 16,7 14.5,8.5C14.2,8.8 14.7,9.3 15,9C16,8 17,8.5 17,9.5Z"/>
+
+    <!-- Popote / Pajilla roja (entrando directo a la boca) -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M11.5,13.5L13.5,17H14.8L12.8,13.5H11.5Z"/>
+
+    <!-- Boca redonda absorbiendo por el popote -->
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M10.5,13.5C10.5,12.7 11.2,12 12,12C12.8,12 13.5,12.7 13.5,13.5C13.5,14.3 12.8,15 12,15C11.2,15 10.5,14.3 10.5,13.5Z"/>
+
+    <!-- Vaso de bebida (Azul turquesa) -->
+    <path
+        android:fillColor="#00ACC1"
+        android:pathData="M9,17.5H15L14.2,22.2C14.1,22.7 13.6,23 13,23H11C10.4,23 9.9,22.7 9.8,22.2L9,17.5Z"/>
+
+    <!-- Tapa del vaso -->
+    <path
+        android:fillColor="#ECEFF1"
+        android:pathData="M8.5,16.5H15.5V18H8.5V16.5Z"/>
 </vector>

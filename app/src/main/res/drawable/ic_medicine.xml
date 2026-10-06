@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Mitad Izquierda (Azul) -->
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M12,7 H7 C4.24,7 2,9.24 2,12 C2,14.76 4.24,17 7,17 H12 V7 Z"/>
+
+    <!-- Mitad Derecha (Roja) -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M12,7 H17 C19.76,7 22,9.24 22,12 C22,14.76 19.76,17 17,17 H12 V7 Z"/>
+
+    <!-- Línea divisoria del centro (Blanca perfecta) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M11.25,7 H12.75 V17 H11.25 Z"/>
+
+    <!-- Brillo superior (Reflejo blanco suave en la cápsula) -->
+    <path
+        android:fillColor="#B0FFFFFF"
+        android:pathData="M6,9 H18 C19,9 19,10 18,10 H6 C5,10 5,9 6,9 Z"/>
+</vector>

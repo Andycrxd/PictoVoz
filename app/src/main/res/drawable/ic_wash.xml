@@ -1,0 +1,45 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Tubo y llave de la regadera (Gris metalizado) -->
+    <path
+        android:fillColor="#78909C"
+        android:pathData="M2,21V20H5V6C5,3.8 6.8,2 9,2H14V4H9C7.9,4 7,4.9 7,6V20H10V21H2Z"/>
+
+    <!-- Cabezal de la regadera -->
+    <path
+        android:fillColor="#455A64"
+        android:pathData="M12,4L17,8H11L12,4Z"/>
+    <path
+        android:fillColor="#90A4AE"
+        android:pathData="M10,8H18V9.5H10V8Z"/>
+
+    <!-- Chorros / Gotas de agua cayendo -->
+    <path
+        android:fillColor="#29B6F6"
+        android:pathData="M11,11.5C11,11.5 10.5,13 10.5,13.8C10.5,14.4 11,14.8 11.5,14.8C12,14.8 12.5,14.4 12.5,13.8C12.5,13 12,11.5 12,11.5"/>
+    <path
+        android:fillColor="#29B6F6"
+        android:pathData="M14,11.5C14,11.5 13.5,13 13.5,13.8C13.5,14.4 14,14.8 14.5,14.8C15,14.8 15.5,14.4 15.5,13.8C15.5,13 15,11.5 15,11.5"/>
+    <path
+        android:fillColor="#29B6F6"
+        android:pathData="M17,11.5C17,11.5 16.5,13 16.5,13.8C16.5,14.4 17,14.8 17.5,14.8C18,14.8 18.5,14.4 18.5,13.8C18.5,13 18,11.5 18,11.5"/>
+
+    <path
+        android:fillColor="#0288D1"
+        android:pathData="M12.5,16C12.5,16 12,17.5 12,18.3C12,18.9 12.5,19.3 13,19.3C13.5,19.3 14,18.9 14,18.3C14,17.5 13.5,16 13.5,16"/>
+    <path
+        android:fillColor="#0288D1"
+        android:pathData="M15.5,16C15.5,16 15,17.5 15,18.3C15,18.9 15.5,19.3 16,19.3C16.5,19.3 17,18.9 17,18.3C17,17.5 16.5,16 16.5,16"/>
+
+    <!-- Burbujas de jabón -->
+    <path
+        android:fillColor="#E0F7FA"
+        android:pathData="M8,15C7.2,15 6.5,15.7 6.5,16.5C6.5,17.3 7.2,18 8,18C8.8,18 9.5,17.3 9.5,16.5C9.5,15.7 8.8,15 8,15Z"/>
+    <path
+        android:fillColor="#E0F7FA"
+        android:pathData="M10,19C9.4,19 9,19.4 9,20C9,20.6 9.4,21 10,21C10.6,21 11,20.6 11,20C11,19.4 10.6,19 10,19Z"/>
+</vector>

@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Sombra suave inferior -->
+    <path
+        android:fillColor="#C62828"
+        android:pathData="M12,21.35L10.55,20.03C5.4,15.36 2,12.28 2,8.5C2,5.42 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.09C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.42 22,8.5C22,12.28 18.6,15.36 13.45,20.04L12,21.35Z"/>
+
+    <!-- Cuerpo principal del corazón (Rojo vibrante) -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M12,20.5L10.55,19.18C5.4,14.51 2,11.43 2,7.65C2,4.57 4.42,2.15 7.5,2.15C9.24,2.15 10.91,2.96 12,4.24C13.09,2.96 14.76,2.15 16.5,2.15C19.58,2.15 22,4.57 22,7.65C22,11.43 18.6,14.51 13.45,19.19L12,20.5Z"/>
+
+    <!-- Brillo/Relieve blanco superior (Estilo 3D/Globo) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.35"
+        android:pathData="M7.5,4C5.5,4 3.8,5.5 3.5,7.5C3.3,8.8 3.8,10.2 4.8,11.3C5.2,10.5 6.2,8.5 8.2,7C9.5,6 10.8,5.8 11.5,5.8C10.5,4.7 9.1,4 7.5,4Z"/>
+
+    <!-- Destello brillante -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M6.5,6C6,6 5.5,6.5 5.5,7C5.5,7.5 6,8 6.5,8C7,8 7.5,7.5 7.5,7C7.5,6.5 7,6 6.5,6Z"/>
+</vector>

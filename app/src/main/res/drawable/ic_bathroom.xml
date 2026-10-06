@@ -1,19 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="96dp"
     android:height="96dp"
     android:viewportWidth="24"
     android:viewportHeight="24">
+
+    <!-- Base y pie del retrete (Blanco con borde oscuro) -->
     <path
-        android:fillColor="#EAF7F2"
-        android:pathData="M2,2h20v20H2z" />
+        android:fillColor="#F5F5F5"
+        android:strokeColor="#424242"
+        android:strokeWidth="1.2"
+        android:pathData="M7,21 L17,21 C17,21 18,17 17,14 L7,14 C6,17 7,21 7,21 Z"/>
+
+    <!-- Taza del retrete -->
     <path
-        android:fillColor="#2F7D68"
-        android:pathData="M7,4h8a2,2 0,0 1,2 2v5a6,6 0,0 1,-6 6H9a2,2 0,0 1,-2 -2V4z" />
+        android:fillColor="#F5F5F5"
+        android:strokeColor="#424242"
+        android:strokeWidth="1.2"
+        android:pathData="M3,11 C3,15 7,16 12,16 C17,16 21,15 21,11 C21,10 19,10 12,10 C5,10 3,10 3,11 Z"/>
+
+    <!-- Tapa / Asiento del retrete -->
     <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M9,6h6v4H9z" />
+        android:fillColor="#E0E0E0"
+        android:strokeColor="#424242"
+        android:strokeWidth="1.2"
+        android:pathData="M3.5,10 C3.5,9 6,9 12,9 C18,9 20.5,9 20.5,10 Z"/>
+
+    <!-- Tanque de agua -->
     <path
-        android:fillColor="#2F7D68"
-        android:pathData="M8,18h8v2H8z" />
+        android:fillColor="#F5F5F5"
+        android:strokeColor="#424242"
+        android:strokeWidth="1.2"
+        android:pathData="M13,2 H20 V10 H13 Z"/>
+
+    <!-- Tapa del tanque -->
+    <path
+        android:fillColor="#E0E0E0"
+        android:strokeColor="#424242"
+        android:strokeWidth="1.2"
+        android:pathData="M12.5,2 H20.5 V3.5 H12.5 Z"/>
+
+    <!-- Palanca del tanque -->
+    <path
+        android:fillColor="#424242"
+        android:pathData="M11.5,5 C11.5,4.5 12,4.5 12.5,4.5 V6.5 C12,6.5 11.5,6.5 11.5,6 Z"/>
 </vector>

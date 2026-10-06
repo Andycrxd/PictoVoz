@@ -1,10 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="96dp"
     android:height="96dp"
     android:viewportWidth="24"
     android:viewportHeight="24">
-    <path android:fillColor="#FEFCE8" android:pathData="M2,2h20v20H2z" />
-    <path android:fillColor="#CA8A04" android:pathData="M3,12l9,-8l9,8h-3v8H6v-8z" />
-    <path android:fillColor="#FFFFFF" android:pathData="M10,14h4v6h-4z" />
+
+    <!-- Chimenea con Humo -->
+    <path
+        android:fillColor="#78909C"
+        android:pathData="M16,3C16,3 15,4 16,5C17,6 16,7 16,7H18V3H16Z"/>
+    <path
+        android:fillColor="#8D6E63"
+        android:pathData="M16,6H19V10H16V6Z"/>
+
+    <!-- Paredes de la Casa -->
+    <path
+        android:fillColor="#FFF8E1"
+        android:pathData="M4,11V21H20V11L12,4L4,11Z"/>
+
+    <!-- Techo Rojo -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M2,11.5L12,3L22,11.5L20.5,13L12,5.8L3.5,13L2,11.5Z"/>
+
+    <!-- Puerta de Madera -->
+    <path
+        android:fillColor="#8D6E63"
+        android:pathData="M10,14H14V21H10V14Z"/>
+    <!-- Perilla de la puerta -->
+    <path
+        android:fillColor="#FFCA28"
+        android:pathData="M13,17.5C13,17.2 13.2,17 13.5,17C13.8,17 14,17.2 14,17.5C14,17.8 13.8,18 13.5,18C13.2,18 13,17.8 13,17.5Z"/>
+
+    <!-- Ventana Azul -->
+    <path
+        android:fillColor="#29B6F6"
+        android:pathData="M6,13H8.5V16.5H6V13Z"/>
+    <!-- Marco de la ventana -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M7,13H7.5V16.5H7V13ZM6,14.5H8.5V15H6V14.5Z"/>
 </vector>
