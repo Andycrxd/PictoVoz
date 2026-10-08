@@ -35,9 +35,21 @@ class MediaPipeAiRepository(
             }
 
             val inputWords = pictograms.joinToString(", ")
-            val prompt = "Convierte estas palabras derivadas de pictogramas en una oración corta, natural y gramaticalmente correcta en español: $inputWords. Devuelve ÚNICAMENTE la oración final, sin explicaciones ni comillas."
+            val prompt = """
+                Eres el motor de generación de oraciones para PictoVoz, una aplicación AAC de comunicación aumentativa y alternativa.
 
-            // Intentamos hasta 2 veces si el servidor devuelve un pico de demanda (503)
+                Tu tarea es recibir una lista de palabras/pictogramas aislados y convertirlos de forma INMEDIATA en una única oración fluida, natural y gramaticalmente correcta en español.
+
+                Instrucciones estrictas:
+                1. Sé extremadamente conciso. Responde ÚNICAMENTE con la oración final formateada en español.
+                2. NO agregues introducciones, explicaciones, ni texto adicional como "Aquí tienes la oración:".
+                3. Corrige concordancia de género, número y conjugaciones verbales según el contexto de la persona o el usuario.
+                4. Manten la latencia al mínimo respondiendo sin preámbulos ni comillas.
+
+                Entrada: $inputWords
+                Salida:
+            """.trimIndent()
+
             repeat(2) { attempt ->
                 try {
                     Log.d("PictoVoz_AI", ">>> Enviando a Gemini Cloud (Intento ${attempt + 1}): '$inputWords'")
@@ -54,14 +66,13 @@ class MediaPipeAiRepository(
 
                     if (is503Error && attempt == 0) {
                         Log.w("PictoVoz_AI", "<<< Servidor ocupado (503). Reintentando en 500 ms...")
-                        delay(500) // Espera rápida antes del segundo intento
+                        delay(500)
                     } else {
                         Log.e("PictoVoz_AI", "<<< ERROR en Gemini Cloud (Intento ${attempt + 1}): ${e.localizedMessage}")
                     }
                 }
             }
 
-            // Si ambos intentos fallan, activa de forma segura el fallback local
             Result.failure(Exception("Servidor Gemini no disponible tras reintentos"))
         }
 }
