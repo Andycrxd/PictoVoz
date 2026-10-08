@@ -89,3 +89,13 @@ app/src/main/java/com/example/cima
 - `TextToSpeechManager.kt`: administración de Text-to-Speech.
 - `HomeScreen.kt`: pantalla principal del prototipo.
 - `InMemoryPictogramRepository.kt`: catálogo local inicial sin base de datos.
+
+### 🔑 Configuración de la API Key de Gemini para que funcione la IA
+
+Para habilitar la generación de oraciones mediante IA en la nube, debes configurar tu clave de API localmente:
+
+1. Obten una clave gratuita en [Google AI Studio](https://aistudio.google.com/).
+2. En la raíz del proyecto, abre el archivo `local.properties` (si no existe, créalo).
+3. Agrega la siguiente línea sustituyendo el valor por tu clave (sin comillas):
+   ```properties
+   GEMINI_API_KEY=tu_api_key_aqui
