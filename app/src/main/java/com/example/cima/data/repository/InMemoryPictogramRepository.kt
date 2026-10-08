@@ -39,6 +39,7 @@ class InMemoryPictogramRepository : PictogramRepository {
         Pictogram("emotions_pain", "Dolor", "emotions", R.drawable.ic_pain),
 
         // FAMILIA (family)
+        Pictogram("family_me", "Yo", "family", R.drawable.ic_me),
         Pictogram("family_mom", "Mamá", "family", R.drawable.ic_mom),
         Pictogram("family_dad", "Papá", "family", R.drawable.ic_dad),
         Pictogram("family_brother", "Hermano", "family", R.drawable.ic_brother),

@@ -1,3 +1,4 @@
+
 package com.example.cima.viewmodel
 
 import androidx.lifecycle.ViewModel
@@ -7,7 +8,6 @@ import com.example.cima.data.model.Pictogram
 import com.example.cima.data.repository.PictogramRepository
 import com.example.cima.domain.SentenceBuilder
 import com.example.cima.domain.TextToSpeechManager
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -88,10 +88,12 @@ class CommunicationViewModel(
         if (selected.isEmpty() || _uiState.value.isProcessing) return
 
         viewModelScope.launch {
-            _uiState.update { it.copy(isProcessing = true, feedbackMessage = "Preparando frase...") }
-            delay(180)
+            // RF20: Muestra el indicador visual de procesamiento
+            _uiState.update { it.copy(isProcessing = true, feedbackMessage = "Procesando mensaje con IA...") }
 
+            // Llama a la IA de forma asíncrona a través del SentenceBuilder
             val sentence = sentenceBuilder.buildSentence(selected)
+
             _uiState.update { state ->
                 state.copy(
                     generatedSentence = sentence,
@@ -100,6 +102,8 @@ class CommunicationViewModel(
                     feedbackMessage = "Frase lista."
                 )
             }
+
+            // RF3.1: Vocalización automática con TTS nativo
             textToSpeechManager.speak(sentence)
         }
     }

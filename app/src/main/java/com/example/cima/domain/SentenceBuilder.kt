@@ -1,22 +1,37 @@
 package com.example.cima.domain
 
 import com.example.cima.data.model.Pictogram
+import com.example.cima.domain.repository.AiRepository
 import java.util.Locale
 
 interface SentenceBuilder {
-    fun buildSentence(pictograms: List<Pictogram>): String
+    suspend fun buildSentence(pictograms: List<Pictogram>): String
 }
 
-class RuleBasedSentenceBuilder : SentenceBuilder {
+class AiSentenceBuilder(
+    private val aiRepository: AiRepository
+) : SentenceBuilder {
 
-    override fun buildSentence(pictograms: List<Pictogram>): String {
+    override suspend fun buildSentence(pictograms: List<Pictogram>): String {
         if (pictograms.isEmpty()) return ""
 
+        // Para 1 solo pictograma, mantenemos la frase rápida directa por regla
         if (pictograms.size == 1) {
             return singlePictogramPhrase(pictograms.first())
         }
 
         val labels = pictograms.map { it.nombre.trim() }.filter { it.isNotBlank() }
+
+        // Intentamos generar la oración procesando la secuencia con el modelo de IA local o cloud
+        val result = aiRepository.generateSentence(labels)
+
+        // RF19 / RC2: Si la IA genera un resultado válido se utiliza; de lo contrario, aplica el fallback de reglas locales
+        return result.getOrElse {
+            fallbackSentence(labels)
+        }
+    }
+
+    private fun fallbackSentence(labels: List<String>): String {
         val rawSentence = labels.joinToString(separator = " ") { label ->
             label.lowercase(Locale("es", "MX"))
         }

@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.cima.data.repository.InMemoryPictogramRepository
-import com.example.cima.domain.RuleBasedSentenceBuilder
 import com.example.cima.domain.TextToSpeechManager
 import com.example.cima.ui.screen.HomeScreen
 import com.example.cima.ui.theme.CimaTheme
@@ -22,9 +21,10 @@ class MainActivity : ComponentActivity() {
 
         textToSpeechManager = TextToSpeechManager(applicationContext)
 
+        // Se pasa la fábrica usando los parámetros exactos definidos en CommunicationViewModelFactory
         val viewModelFactory = CommunicationViewModelFactory(
-            repository = InMemoryPictogramRepository(),
-            sentenceBuilder = RuleBasedSentenceBuilder(),
+            context = applicationContext,
+            pictogramRepository = InMemoryPictogramRepository(),
             textToSpeechManager = textToSpeechManager
         )
 
