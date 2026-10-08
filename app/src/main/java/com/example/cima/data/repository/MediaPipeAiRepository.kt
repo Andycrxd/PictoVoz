@@ -2,6 +2,7 @@ package com.example.cima.data.repository
 
 import android.content.Context
 import android.util.Log
+import com.example.cima.BuildConfig
 import com.example.cima.domain.repository.AiRepository
 import com.google.ai.client.generativeai.GenerativeModel
 import com.google.ai.client.generativeai.type.generationConfig
@@ -10,11 +11,11 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 
 class MediaPipeAiRepository(
-    private val apiKey: String = "AQ.Ab8RN6KwSLKLnm4Bqzh943FBFcxjNQ3B89IOaLvdH85yHPefXg"
+    private val apiKey: String = BuildConfig.GEMINI_API_KEY
 ) : AiRepository {
 
     constructor(context: Context, modelFileName: String = "") : this(
-        apiKey = "AQ.Ab8RN6KwSLKLnm4Bqzh943FBFcxjNQ3B89IOaLvdH85yHPefXg"
+        apiKey = BuildConfig.GEMINI_API_KEY
     )
 
     private val generativeModel by lazy {
