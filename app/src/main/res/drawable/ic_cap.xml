@@ -1,0 +1,52 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Círculo de fondo pastel amarillo suave -->
+    <path
+        android:fillColor="#FFF8E1"
+        android:pathData="M64,12 C35.28,12 12,35.28 12,64 C12,92.72 35.28,116 64,116 C92.72,116 116,92.72 116,64 C116,35.28 92.72,12 64,12 Z"/>
+
+    <!-- Botón Superior -->
+    <path
+        android:fillColor="#D32F2F"
+        android:strokeColor="#1F2937"
+        android:strokeWidth="2.5"
+        android:strokeLineJoin="round"
+        android:pathData="M72,26 C72,24 75,22 78,22 C81,22 83,24 83,26 Z"/>
+
+    <!-- Panel Trasero / Lateral (Rojo más oscuro) -->
+    <path
+        android:fillColor="#D32F2F"
+        android:strokeColor="#1F2937"
+        android:strokeWidth="3"
+        android:strokeLineJoin="round"
+        android:pathData="M83,26 C98,34 114,48 112,74 C100,76 89,74 89,72 C89,52 83,26 83,26 Z"/>
+
+    <!-- Panel Frontal Principal (Rojo brillante) -->
+    <path
+        android:fillColor="#FF1744"
+        android:strokeColor="#1F2937"
+        android:strokeWidth="3"
+        android:strokeLineJoin="round"
+        android:pathData="M83,26 C62,24 41,38 37,64 C50,68 76,72 89,72 C89,52 83,26 83,26 Z"/>
+
+    <!-- Visera Curva Curvada hacia la Izquierda -->
+    <path
+        android:fillColor="#FF1744"
+        android:strokeColor="#1F2937"
+        android:strokeWidth="3"
+        android:strokeLineJoin="round"
+        android:pathData="M37,64 C28,68 18,74 12,82 C14,88 22,88 28,88 C52,88 78,76 89,72 C72,66 48,64 37,64 Z"/>
+
+    <!-- Sombra Inferior de la Visera -->
+    <path
+        android:fillColor="#D32F2F"
+        android:strokeColor="#1F2937"
+        android:strokeWidth="2"
+        android:pathData="M12,82 C14,88 22,88 28,88 L25,84 C18,84 14,82 12,82 Z"/>
+
+
+</vector>

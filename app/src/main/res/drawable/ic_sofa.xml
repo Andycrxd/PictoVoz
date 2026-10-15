@@ -1,0 +1,39 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Fondo pastel -->
+    <path
+        android:fillColor="#FFF3E0"
+        android:pathData="M64,12 C35.28,12 12,35.28 12,64 C12,92.72 35.28,116 64,116 C92.72,116 116,92.72 116,64 C116,35.28 92.72,12 64,12 Z"/>
+
+    <!-- Patas de madera (Ubicación extendida horizontalmente) -->
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M18,90 L14,102 H22 L22,90 Z M110,90 L106,102 H114 L110,90 Z"/>
+
+    <!-- Base y cojín principal (Mucho más ancho horizontalmente) -->
+    <path
+        android:fillColor="#FFB74D"
+        android:pathData="M16,70 H112 V90 C112,93 109,96 106,96 H22 C19,96 16,93 16,90 Z"/>
+
+    <!-- Divisores de cojines de asiento (Añadidos para aspecto horizontal) -->
+    <path
+        android:fillColor="#F57C00"
+        android:pathData="M48,70 H52 V90 H48 Z M76,70 H80 V90 H76 Z"/>
+
+    <!-- Respaldar (Extendido y redondeado horizontalmente) -->
+    <path
+        android:fillColor="#FFA726"
+        android:pathData="M20,38 H108 C111,38 114,41 114,44 V70 H14 V44 C14,41 17,38 20,38 Z"/>
+
+    <!-- Apoyabrazos Izquierdo y Derecho (Posicionamiento ancho) -->
+    <path
+        android:fillColor="#FB8C00"
+        android:pathData="M10,56 C10,52 13,48 17,48 H22 V88 H17 C13,88 10,85 10,81 Z"/>
+    <path
+        android:fillColor="#FB8C00"
+        android:pathData="M106,48 H111 C115,48 118,52 118,56 V81 C118,85 115,88 111,88 H106 Z"/>
+</vector>

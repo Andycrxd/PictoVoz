@@ -1,0 +1,41 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Fondo pastel suave -->
+    <path
+        android:fillColor="#E0F2F1"
+        android:pathData="M64,12 C35.28,12 12,35.28 12,64 C12,92.72 35.28,116 64,116 C92.72,116 116,92.72 116,64 C116,35.28 92.72,12 64,12 Z"/>
+
+    <!-- Cuerpo Principal del Refrigerador -->
+    <path
+        android:fillColor="#78909C"
+        android:pathData="M40,20 H88 C91,20 94,23 94,26 V102 C94,105 91,108 88,108 H40 C37,108 34,105 34,102 V26 C34,23 37,20 40,20 Z"/>
+
+    <!-- Puerta Superior (Congelador) -->
+    <path
+        android:fillColor="#B0BEC5"
+        android:pathData="M38,24 H90 V50 H38 Z"/>
+
+    <!-- Puerta Inferior (Refrigerador) -->
+    <path
+        android:fillColor="#CFD8DC"
+        android:pathData="M38,54 H90 V104 H38 Z"/>
+
+    <!-- Agarradera Superior -->
+    <path
+        android:fillColor="#37474F"
+        android:pathData="M44,32 H48 V44 H44 Z"/>
+
+    <!-- Agarradera Inferior -->
+    <path
+        android:fillColor="#37474F"
+        android:pathData="M44,60 H48 V80 H44 Z"/>
+
+    <!-- Patas inferiores -->
+    <path
+        android:fillColor="#37474F"
+        android:pathData="M40,108 H46 V112 H40 Z M82,108 H88 V112 H82 Z"/>
+</vector>

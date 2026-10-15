@@ -13,7 +13,10 @@ class InMemoryPictogramRepository : PictogramRepository {
         Categoria("family", "Familia"),
         Categoria("actions", "Acciones"),
         Categoria("objects", "Objetos"),
-        Categoria("people", "Personas")
+        Categoria("people", "Personas"),
+        Categoria("clothes", "Ropa"),
+        Categoria("numbers", "Numeros"),
+        Categoria("colors", "Colores"),
     )
 
     private val pictograms = listOf(
@@ -59,15 +62,21 @@ class InMemoryPictogramRepository : PictogramRepository {
         Pictogram("actions_watch", "Ver", "actions", R.drawable.ic_watch),
 
         // OBJETOS (objects)
-        Pictogram("objects_water", "Agua", "objects", R.drawable.ic_water),
-        Pictogram("objects_food", "Comida", "objects", R.drawable.ic_food),
         Pictogram("objects_ball", "Pelota", "objects", R.drawable.ic_ball),
         Pictogram("objects_house", "Casa", "objects", R.drawable.ic_house),
         Pictogram("objects_toy", "Juguete", "objects", R.drawable.ic_toy),
         Pictogram("objects_book", "Libro", "objects", R.drawable.ic_book),
-        Pictogram("objects_clothes", "Ropa", "objects", R.drawable.ic_clothes),
+        Pictogram("objects_tv", "Televisión", "objects", R.drawable.ic_tv),
+        Pictogram("objects_remote", "Control remoto", "objects", R.drawable.ic_remote),
+        Pictogram("objects_lamp", "Lámpara", "objects", R.drawable.ic_lamp),
+        Pictogram("objects_living_table", "Mesa", "objects", R.drawable.ic_living_table),
+        Pictogram("objects_fridge", "Refrigerador", "objects", R.drawable.ic_fridge),
+        Pictogram("objects_dresser", "Mueble", "objects", R.drawable.ic_dresser),
+        Pictogram("objects_sofa", "Sillón", "objects", R.drawable.ic_sofa),
 
-        // PERSONAS (people)
+
+
+                // PERSONAS (people)
         Pictogram("people_mom", "Mamá", "people", R.drawable.ic_mom),
         Pictogram("people_dad", "Papá", "people", R.drawable.ic_dad),
         Pictogram("people_teacher", "Maestro", "people", R.drawable.ic_teacher),
@@ -184,11 +193,6 @@ class InMemoryPictogramRepository : PictogramRepository {
         emojiPictogram("objects_bed", "Cama", "objects", "🛏️"),
         emojiPictogram("objects_pillow", "Almohada", "objects", "🛌"),
         emojiPictogram("objects_blanket", "Manta", "objects", "🧣"),
-        emojiPictogram("objects_shoes", "Zapatos", "objects", "👟"),
-        emojiPictogram("objects_socks", "Calcetines", "objects", "🧦"),
-        emojiPictogram("objects_pants", "Pantalón", "objects", "👖"),
-        emojiPictogram("objects_shirt", "Camisa", "objects", "👕"),
-        emojiPictogram("objects_coat", "Abrigo", "objects", "🧥"),
         emojiPictogram("objects_glass", "Vaso", "objects", "🥛"),
         emojiPictogram("objects_plate", "Plato", "objects", "🍽️"),
         emojiPictogram("objects_spoon", "Cuchara", "objects", "🥄"),
@@ -220,7 +224,41 @@ class InMemoryPictogramRepository : PictogramRepository {
         emojiPictogram("people_salesperson", "Vendedor", "people", "🛍️"),
         emojiPictogram("people_driver", "Conductor", "people", "🚘"),
         emojiPictogram("people_neighbor_male", "Vecino", "people", "🏠"),
-        emojiPictogram("people_neighbor_female", "Vecina", "people", "🏡")
+        emojiPictogram("people_neighbor_female", "Vecina", "people", "🏡"),
+
+        //ropa
+        emojiPictogram("clothes_shoes", "Zapatos", "clothes", "👟"),
+        emojiPictogram("clothes_socks", "Calcetines", "clothes", "🧦"),
+        emojiPictogram("clothes_pants", "Pantalón", "clothes", "👖"),
+        emojiPictogram("clothes_shirt", "Camisa", "clothes", "👕"),
+        emojiPictogram("clothes_coat", "Abrigo", "clothes", "🧥"),
+        Pictogram("clothes_cap", "Gorra", "clothes", R.drawable.ic_cap),
+        Pictogram("clothes_skirt", "Falda", "clothes", R.drawable.ic_skirt),
+
+        //numeros
+        Pictogram("numbers_0", "Cero", "numbers", R.drawable.ic_number_0),
+        Pictogram("numbers_1", "Uno", "numbers", R.drawable.ic_number_1),
+        Pictogram("numbers_2", "Dos", "numbers", R.drawable.ic_number_2),
+        Pictogram("numbers_3", "Tres", "numbers", R.drawable.ic_number_3),
+        Pictogram("numbers_4", "Cuatro", "numbers", R.drawable.ic_number_4),
+        Pictogram("numbers_5", "Cinco", "numbers", R.drawable.ic_number_5),
+        Pictogram("numbers_6", "Seis", "numbers", R.drawable.ic_number_6),
+        Pictogram("numbers_7", "Siete", "numbers", R.drawable.ic_number_7),
+        Pictogram("numbers_8", "Ocho", "numbers", R.drawable.ic_number_8),
+        Pictogram("numbers_9", "Nueve", "numbers", R.drawable.ic_number_9),
+
+        //colores
+        Pictogram("colors_red", "Rojo", "colors", R.drawable.ic_red),
+        Pictogram("colors_blue", "Azul", "colors", R.drawable.ic_blue),
+        Pictogram("colors_yellow", "Amarillo", "colors", R.drawable.ic_yellow),
+        Pictogram("colors_green", "Verde", "colors", R.drawable.ic_green),
+        Pictogram("colors_orange", "Naranja", "colors", R.drawable.ic_orangec),
+        Pictogram("colors_purple", "Morado", "colors", R.drawable.ic_purple),
+        Pictogram("colors_pink", "Rosa", "colors", R.drawable.ic_pink),
+        Pictogram("colors_brown", "Marrón", "colors", R.drawable.ic_brown),
+        Pictogram("colors_black", "Negro", "colors", R.drawable.ic_black),
+        Pictogram("colors_white", "Blanco", "colors", R.drawable.ic_white),
+        Pictogram("colors_grey", "Gris", "colors", R.drawable.ic_grey),
     )
 
     private fun emojiPictogram(

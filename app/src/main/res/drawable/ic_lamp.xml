@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Fondo pastel -->
+    <path
+        android:fillColor="#FFF8E1"
+        android:pathData="M64,12 C35.28,12 12,35.28 12,64 C12,92.72 35.28,116 64,116 C92.72,116 116,92.72 116,64 C116,35.28 92.72,12 64,12 Z"/>
+
+    <!-- Destellos de luz (Efecto encendido) -->
+    <path
+        android:fillColor="#FFE082"
+        android:pathData="M64,20 L30,68 H98 Z"/>
+
+    <!-- Pantalla de la Lámpara -->
+    <path
+        android:fillColor="#FFB300"
+        android:pathData="M44,30 L36,68 H92 L84,30 Z"/>
+
+    <!-- Base y Poste central -->
+    <path
+        android:fillColor="#37474F"
+        android:pathData="M61,68 H67 V98 H61 Z M42,98 H86 C88,98 90,100 90,102 V104 H38 V102 C38,100 40,98 42,98 Z"/>
+</vector>

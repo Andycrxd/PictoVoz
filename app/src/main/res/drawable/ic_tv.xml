@@ -1,0 +1,31 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Fondo pastel verde menta suave -->
+    <path
+        android:fillColor="#E8F5E9"
+        android:pathData="M64,12 C35.28,12 12,35.28 12,64 C12,92.72 35.28,116 64,116 C92.72,116 116,92.72 116,64 C116,35.28 92.72,12 64,12 Z"/>
+
+    <!-- Base y patas de la TV -->
+    <path
+        android:fillColor="#37474F"
+        android:pathData="M50,92 H78 V96 H50 Z M60,84 H68 V92 H60 Z"/>
+
+    <!-- Marco exterior -->
+    <path
+        android:fillColor="#37474F"
+        android:pathData="M24,32 H104 V84 H24 Z"/>
+
+    <!-- Pantalla encendida -->
+    <path
+        android:fillColor="#81D4FA"
+        android:pathData="M28,36 H100 V80 H28 Z"/>
+
+    <!-- Reflexión / Brillo diagonal en pantalla -->
+    <path
+        android:fillColor="#B3E5FC"
+        android:pathData="M32,40 L60,40 L32,68 Z"/>
+</vector>

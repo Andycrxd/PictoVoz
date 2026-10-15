@@ -1,0 +1,29 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Fondo pastel rosado -->
+    <path
+        android:fillColor="#FCE4EC"
+        android:pathData="M64,12 C35.28,12 12,35.28 12,64 C12,92.72 35.28,116 64,116 C92.72,116 116,92.72 116,64 C116,35.28 92.72,12 64,12 Z"/>
+
+    <!-- Cuerpo principal de la falda (Rosado/Cerezo) -->
+    <path
+        android:fillColor="#EC407A"
+        android:strokeColor="#C2185B"
+        android:strokeWidth="2"
+        android:strokeLineJoin="round"
+        android:pathData="M44,32 H84 L104,92 C104,92 78,98 64,98 C50,98 24,92 24,92 L44,32 Z"/>
+
+    <!-- Cinturilla de la falda -->
+    <path
+        android:fillColor="#C2185B"
+        android:pathData="M44,32 H84 V40 H44 Z"/>
+
+    <!-- Pliegues/Tablas verticales de la falda -->
+    <path
+        android:fillColor="#D81B60"
+        android:pathData="M52,40 L44,93 H48 L55,40 Z M62,40 L61,97 H65 L66,40 Z M73,40 L80,93 H84 L76,40 Z"/>
+</vector>

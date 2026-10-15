@@ -1,0 +1,48 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Fondo pastel -->
+    <path
+        android:fillColor="#FFF3E0"
+        android:pathData="M64,12 C35.28,12 12,35.28 12,64 C12,92.72 35.28,116 64,116 C92.72,116 116,92.72 116,64 C116,35.28 92.72,12 64,12 Z"/>
+
+    <!-- Cuerpo principal de Madera -->
+    <path
+        android:fillColor="#8D6E63"
+        android:pathData="M24,28 H104 C107,28 110,31 110,34 V100 H18 V34 C18,31 21,28 24,28 Z"/>
+
+    <!-- Patas del Mueble -->
+    <path
+        android:fillColor="#4E342E"
+        android:pathData="M22,100 L18,108 H28 L28,100 Z M100,100 L100,108 H110 L106,100 Z"/>
+
+    <!-- Cajón 1 (Superior) -->
+    <path
+        android:fillColor="#A1887F"
+        android:pathData="M24,36 H104 V54 H24 Z"/>
+    <!-- Jaladera 1 -->
+    <path
+        android:fillColor="#37474F"
+        android:pathData="M56,43 H72 V47 H56 Z"/>
+
+    <!-- Cajón 2 (Medio) -->
+    <path
+        android:fillColor="#A1887F"
+        android:pathData="M24,58 H104 V76 H24 Z"/>
+    <!-- Jaladera 2 -->
+    <path
+        android:fillColor="#37474F"
+        android:pathData="M56,65 H72 V69 H56 Z"/>
+
+    <!-- Cajón 3 (Inferior) -->
+    <path
+        android:fillColor="#A1887F"
+        android:pathData="M24,80 H104 V98 H24 Z"/>
+    <!-- Jaladera 3 -->
+    <path
+        android:fillColor="#37474F"
+        android:pathData="M56,87 H72 V91 H56 Z"/>
+</vector>

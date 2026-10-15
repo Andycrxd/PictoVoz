@@ -1,0 +1,39 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Fondo pastel de la sala -->
+    <path
+        android:fillColor="#E8F5E9"
+        android:pathData="M64,12 C35.28,12 12,35.28 12,64 C12,92.72 35.28,116 64,116 C92.72,116 116,92.72 116,64 C116,35.28 92.72,12 64,12 Z"/>
+
+    <!-- Cuerpo del control (Más largo y estrecho) -->
+    <path
+        android:fillColor="#37474F"
+        android:pathData="M52,16 H76 C80,16 84,20 84,24 V104 C84,108 80,112 76,112 H52 C48,112 44,108 44,104 V24 C44,20 48,16 52,16 Z"/>
+
+    <!-- Botón de Encendido (Rojo, ubicado arriba) -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M56,24 C56,22 58,20 60,20 H64 C66,20 68,22 68,24 V28 C68,30 66,32 64,32 H60 C58,32 56,30 56,28 Z"/>
+
+    <!-- LED Emisor superior -->
+    <path
+        android:fillColor="#90A4AE"
+        android:pathData="M61,12 H67 V16 H61 Z"/>
+
+    <!-- D-Pad (Cruceta de navegación, ubicada más abajo) -->
+    <path
+        android:fillColor="#78909C"
+        android:pathData="M62,48 H66 V68 H62 Z"/>
+    <path
+        android:fillColor="#78909C"
+        android:pathData="M56,54 H72 V62 H56 Z"/>
+
+    <!-- Botones numéricos / de opción (Espaciados y ubicados más abajo) -->
+    <path
+        android:fillColor="#CFD8DC"
+        android:pathData="M52,74 H58 V80 H52 Z M61,74 H67 V80 H61 Z M70,74 H76 V80 H70 Z M52,86 H58 V92 H52 Z M61,86 H67 V92 H61 Z M70,86 H76 V92 H70 Z M52,98 H58 V104 H52 Z M61,98 H67 V104 H61 Z M70,98 H76 V104 H70 Z"/>
+</vector>
