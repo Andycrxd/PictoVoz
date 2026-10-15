@@ -36,7 +36,7 @@ fun PictogramCard(
         onClick = onClick,
         modifier = modifier
             .fillMaxWidth()
-            .height(130.dp), // Altura fija estricta para garantizar uniformidad visual en la grilla
+            .height(130.dp),
         shape = RoundedCornerShape(12.dp),
         border = BorderStroke(1.5.dp, CimaOutline.copy(alpha = 0.30f)),
         colors = CardDefaults.cardColors(
@@ -54,16 +54,26 @@ fun PictogramCard(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            // El pictograma toma el protagonismo visual
-            Image(
-                painter = painterResource(id = pictogram.imageResId),
-                contentDescription = pictogram.nombre,
-                modifier = Modifier.size(84.dp)
-            )
+            val emoji = pictogram.visualEmoji
+            if (emoji != null) {
+                Text(
+                    text = emoji,
+                    modifier = Modifier.size(84.dp),
+                    fontSize = 58.sp,
+                    lineHeight = 64.sp,
+                    textAlign = TextAlign.Center,
+                    maxLines = 1
+                )
+            } else {
+                Image(
+                    painter = painterResource(id = requireNotNull(pictogram.imageResId)),
+                    contentDescription = pictogram.nombre,
+                    modifier = Modifier.size(84.dp)
+                )
+            }
 
             Spacer(modifier = Modifier.height(4.dp))
 
-            // Texto pequeño de apoyo secundario
             Text(
                 text = pictogram.nombre,
                 style = MaterialTheme.typography.labelMedium.copy(fontSize = 11.sp),

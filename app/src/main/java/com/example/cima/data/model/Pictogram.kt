@@ -6,5 +6,6 @@ data class Pictogram(
     val id: String,
     val nombre: String,
     val categoriaId: String,
-    @DrawableRes val imageResId: Int
+    @DrawableRes val imageResId: Int? = null,
+    val visualEmoji: String? = null
 )

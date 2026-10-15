@@ -36,6 +36,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.cima.data.model.Pictogram
 import com.example.cima.ui.theme.CimaOutline
 import com.example.cima.ui.theme.CimaSentenceSurface
@@ -149,11 +150,23 @@ private fun SentenceSlot(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
-                Image(
-                    painter = painterResource(id = pictogram.imageResId),
-                    contentDescription = pictogram.nombre,
-                    modifier = Modifier.size(52.dp)
-                )
+                val emoji = pictogram.visualEmoji
+                if (emoji != null) {
+                    Text(
+                        text = emoji,
+                        modifier = Modifier.size(52.dp),
+                        fontSize = 34.sp,
+                        lineHeight = 38.sp,
+                        textAlign = TextAlign.Center,
+                        maxLines = 1
+                    )
+                } else {
+                    Image(
+                        painter = painterResource(id = requireNotNull(pictogram.imageResId)),
+                        contentDescription = pictogram.nombre,
+                        modifier = Modifier.size(52.dp)
+                    )
+                }
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
                     text = pictogram.nombre,
@@ -166,3 +179,4 @@ private fun SentenceSlot(
         }
     }
 }
+
