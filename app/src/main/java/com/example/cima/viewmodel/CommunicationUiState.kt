@@ -14,7 +14,9 @@ data class CommunicationUiState(
     val lastSpokenSentence: String = "",
     val feedbackMessage: String = "",
     val isProcessing: Boolean = false,
-    val limitWarningCounter: Int = 0
+    val limitWarningCounter: Int = 0,
+    val isSearchActive: Boolean = false,
+    val searchQuery: String = ""
 ) {
     val canSpeak: Boolean
         get() = selectedPictograms.isNotEmpty() && !isProcessing

@@ -21,7 +21,6 @@ class MainActivity : ComponentActivity() {
 
         textToSpeechManager = TextToSpeechManager(applicationContext)
 
-        // Se pasa la fábrica usando los parámetros exactos definidos en CommunicationViewModelFactory
         val viewModelFactory = CommunicationViewModelFactory(
             context = applicationContext,
             pictogramRepository = InMemoryPictogramRepository(),
@@ -41,7 +40,10 @@ class MainActivity : ComponentActivity() {
                     onClearSentence = viewModel::clearSentence,
                     onSpeak = viewModel::speakCurrentSentence,
                     onRepeat = viewModel::repeatLastSentence,
-                    onQuickPhraseSelected = viewModel::speakQuickPhrase
+                    onQuickPhraseSelected = viewModel::speakQuickPhrase,
+                    onToggleSearch = viewModel::toggleSearch,
+                    onSearchKeyInput = viewModel::onSearchKeyInput,
+                    onSearchBackspace = viewModel::onSearchBackspace
                 )
             }
         }

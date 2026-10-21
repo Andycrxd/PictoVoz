@@ -38,7 +38,9 @@ class CommunicationViewModel(
             state.copy(
                 selectedCategoryId = categoryId,
                 pictograms = repository.getPictogramsByCategory(categoryId),
-                feedbackMessage = ""
+                feedbackMessage = "",
+                isSearchActive = false,
+                searchQuery = ""
             )
         }
     }
@@ -88,10 +90,8 @@ class CommunicationViewModel(
         if (selected.isEmpty() || _uiState.value.isProcessing) return
 
         viewModelScope.launch {
-            // RF20: Muestra el indicador visual de procesamiento
             _uiState.update { it.copy(isProcessing = true, feedbackMessage = "Procesando mensaje con IA...") }
 
-            // Llama a la IA de forma asíncrona a través del SentenceBuilder
             val sentence = sentenceBuilder.buildSentence(selected)
 
             _uiState.update { state ->
@@ -103,7 +103,6 @@ class CommunicationViewModel(
                 )
             }
 
-            // RF3.1: Vocalización automática con TTS nativo
             textToSpeechManager.speak(sentence)
         }
     }
@@ -126,6 +125,50 @@ class CommunicationViewModel(
         if (lastSentence.isBlank()) return
         textToSpeechManager.speak(lastSentence)
         _uiState.update { it.copy(feedbackMessage = "Repitiendo última frase.") }
+    }
+
+    fun toggleSearch() {
+        _uiState.update { state ->
+            val nextSearchState = !state.isSearchActive
+            state.copy(
+                isSearchActive = nextSearchState,
+                searchQuery = "",
+                pictograms = if (!nextSearchState) {
+                    repository.getPictogramsByCategory(state.selectedCategoryId)
+                } else {
+                    state.pictograms
+                }
+            )
+        }
+    }
+
+    fun onSearchKeyInput(char: String) {
+        _uiState.update { state ->
+            val newQuery = state.searchQuery + char
+            performSearch(state, newQuery)
+        }
+    }
+
+    fun onSearchBackspace() {
+        _uiState.update { state ->
+            if (state.searchQuery.isEmpty()) return@update state
+            val newQuery = state.searchQuery.dropLast(1)
+            performSearch(state, newQuery)
+        }
+    }
+
+    private fun performSearch(currentState: CommunicationUiState, query: String): CommunicationUiState {
+        val filteredList = if (query.isBlank()) {
+            repository.getPictogramsByCategory(currentState.selectedCategoryId)
+        } else {
+            repository.getPictograms().filter {
+                it.nombre.contains(query, ignoreCase = true)
+            }
+        }
+        return currentState.copy(
+            searchQuery = query,
+            pictograms = filteredList
+        )
     }
 
     override fun onCleared() {
