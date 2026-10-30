@@ -22,57 +22,59 @@ class MediaPipeAiRepository(
         GenerativeModel(
             modelName = "gemini-3.8-flash",
             apiKey = apiKey,
-            generationConfig = generationConfig {
-                temperature = 0.2f
-            }
+            generationConfig = generationConfig { temperature = 0.2f }
         )
     }
 
     override suspend fun generateSentence(pictograms: List<String>): Result<String> =
-        withContext(Dispatchers.IO) {
-            if (pictograms.isEmpty()) {
-                return@withContext Result.failure(IllegalArgumentException("Lista de pictogramas vacía"))
-            }
+        generateSentence(pictograms, "Intermedio", "Primera persona (yo)")
 
-            val inputWords = pictograms.joinToString(", ")
-            val prompt = """
-                Eres el motor de generación de oraciones para PictoVoz, una aplicación AAC de comunicación aumentativa y alternativa.
+    override suspend fun generateSentence(
+        pictograms: List<String>,
+        vocabularyLevel: String,
+        grammaticalPerson: String
+    ): Result<String> = withContext(Dispatchers.IO) {
+        if (pictograms.isEmpty()) {
+            return@withContext Result.failure(IllegalArgumentException("Lista de pictogramas vacía"))
+        }
 
-                Tu tarea es recibir una lista de palabras/pictogramas aislados y convertirlos de forma INMEDIATA en una única oración fluida, natural y gramaticalmente correcta en español.
+        val inputWords = pictograms.joinToString(", ")
+        val prompt = """
+            Eres el motor de generación de oraciones para PictoVoz, una aplicación AAC de comunicación aumentativa y alternativa.
 
-                Instrucciones estrictas:
-                1. Sé extremadamente conciso. Responde ÚNICAMENTE con la oración final formateada en español.
-                2. NO agregues introducciones, explicaciones, ni texto adicional como "Aquí tienes la oración:".
-                3. Corrige concordancia de género, número y conjugaciones verbales según el contexto de la persona o el usuario.
-                4. Manten la latencia al mínimo respondiendo sin preámbulos ni comillas.
+            Convierte las palabras/pictogramas en una única oración breve, natural y gramaticalmente correcta en español.
+            Nivel de vocabulario: $vocabularyLevel.
+            Persona gramatical: $grammaticalPerson.
 
-                Entrada: $inputWords
-                Salida:
-            """.trimIndent()
+            Instrucciones:
+            1. Responde únicamente con la oración final, sin explicaciones ni comillas.
+            2. Usa palabras adecuadas al nivel de vocabulario elegido.
+            3. Usa la persona gramatical elegida y mantén concordancia de género, número y conjugación.
+            4. Conserva el significado de los pictogramas y sé conciso.
 
-            repeat(2) { attempt ->
-                try {
-                    Log.d("PictoVoz_AI", ">>> Enviando a Gemini Cloud (Intento ${attempt + 1}): '$inputWords'")
+            Entrada: $inputWords
+            Salida:
+        """.trimIndent()
 
-                    val response = generativeModel.generateContent(prompt)
-                    val generatedText = response.text?.trim()
-
-                    if (!generatedText.isNullOrEmpty()) {
-                        Log.d("PictoVoz_AI", "<<< ÉXITO Gemini Cloud: '$generatedText'")
-                        return@withContext Result.success(generatedText)
-                    }
-                } catch (e: Exception) {
-                    val is503Error = e.localizedMessage?.contains("503") == true || e.localizedMessage?.contains("UNAVAILABLE") == true
-
-                    if (is503Error && attempt == 0) {
-                        Log.w("PictoVoz_AI", "<<< Servidor ocupado (503). Reintentando en 500 ms...")
-                        delay(500)
-                    } else {
-                        Log.e("PictoVoz_AI", "<<< ERROR en Gemini Cloud (Intento ${attempt + 1}): ${e.localizedMessage}")
-                    }
+        repeat(2) { attempt ->
+            try {
+                Log.d("PictoVoz_AI", ">>> Enviando a Gemini Cloud (Intento ${attempt + 1}): '$inputWords'")
+                val generatedText = generativeModel.generateContent(prompt).text?.trim()
+                if (!generatedText.isNullOrEmpty()) {
+                    Log.d("PictoVoz_AI", "<<< ÉXITO Gemini Cloud: '$generatedText'")
+                    return@withContext Result.success(generatedText)
+                }
+            } catch (error: Exception) {
+                val unavailable = error.localizedMessage?.contains("503") == true ||
+                    error.localizedMessage?.contains("UNAVAILABLE") == true
+                if (unavailable && attempt == 0) {
+                    Log.w("PictoVoz_AI", "Servidor ocupado; reintentando en 500 ms")
+                    delay(500)
+                } else {
+                    Log.e("PictoVoz_AI", "Error en Gemini: ${error.localizedMessage}")
                 }
             }
-
-            Result.failure(Exception("Servidor Gemini no disponible tras reintentos"))
         }
+        Result.failure(Exception("Servidor Gemini no disponible tras reintentos"))
+    }
 }

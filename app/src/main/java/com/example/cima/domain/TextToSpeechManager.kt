@@ -1,15 +1,20 @@
 package com.example.cima.domain
 
 import android.content.Context
+import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import java.util.Locale
 
-class TextToSpeechManager(context: Context) : TextToSpeech.OnInitListener {
+class TextToSpeechManager(
+    context: Context,
+    initialVolume: Float = 1f
+) : TextToSpeech.OnInitListener {
 
     private var textToSpeech: TextToSpeech? = TextToSpeech(context.applicationContext, this)
     private var isReady = false
     private var pendingText: String? = null
     private var lastText: String? = null
+    private var volume = initialVolume.coerceIn(0f, 1f)
 
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
@@ -27,6 +32,10 @@ class TextToSpeechManager(context: Context) : TextToSpeech.OnInitListener {
         }
     }
 
+    fun setVolume(value: Float) {
+        volume = value.coerceIn(0f, 1f)
+    }
+
     fun speak(text: String) {
         val cleanText = text.trim()
         if (cleanText.isBlank()) return
@@ -37,10 +46,13 @@ class TextToSpeechManager(context: Context) : TextToSpeech.OnInitListener {
             return
         }
 
+        val parameters = Bundle().apply {
+            putFloat(TextToSpeech.Engine.KEY_PARAM_VOLUME, volume)
+        }
         textToSpeech?.speak(
             cleanText,
             TextToSpeech.QUEUE_FLUSH,
-            null,
+            parameters,
             "cima_utterance_${System.currentTimeMillis()}"
         )
     }

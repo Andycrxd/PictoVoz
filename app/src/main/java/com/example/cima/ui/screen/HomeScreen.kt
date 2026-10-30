@@ -50,6 +50,7 @@ fun HomeScreen(
     onToggleSearch: () -> Unit,
     onSearchKeyInput: (String) -> Unit,
     onSearchBackspace: () -> Unit,
+    onOpenAdmin: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     Scaffold(
@@ -102,6 +103,13 @@ fun HomeScreen(
                 )
 
                 Spacer(modifier = Modifier.width(8.dp))
+
+                FilledTonalIconButton(
+                    onClick = onOpenAdmin,
+                    modifier = Modifier.size(56.dp)
+                ) {
+                    Text(text = "⚙️", fontSize = 24.sp)
+                }
 
                 FilledTonalIconButton(
                     onClick = onToggleSearch,

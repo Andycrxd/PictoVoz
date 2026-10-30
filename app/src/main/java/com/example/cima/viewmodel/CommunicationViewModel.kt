@@ -6,6 +6,8 @@ import androidx.lifecycle.viewModelScope
 import com.example.cima.data.model.FraseRapida
 import com.example.cima.data.model.Pictogram
 import com.example.cima.data.repository.PictogramRepository
+import com.example.cima.data.repository.AdminPreferencesRepository
+import com.example.cima.domain.ConfigurableSentenceBuilder
 import com.example.cima.domain.SentenceBuilder
 import com.example.cima.domain.TextToSpeechManager
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -17,7 +19,8 @@ import kotlinx.coroutines.launch
 class CommunicationViewModel(
     private val repository: PictogramRepository,
     private val sentenceBuilder: SentenceBuilder,
-    private val textToSpeechManager: TextToSpeechManager
+    private val textToSpeechManager: TextToSpeechManager,
+    private val adminPreferencesRepository: AdminPreferencesRepository? = null
 ) : ViewModel() {
 
     private val maxPictograms = 5
@@ -32,6 +35,20 @@ class CommunicationViewModel(
         )
     )
     val uiState: StateFlow<CommunicationUiState> = _uiState.asStateFlow()
+
+    init {
+        adminPreferencesRepository?.let { preferences ->
+            viewModelScope.launch {
+                preferences.settings.collect { settings ->
+                    (sentenceBuilder as? ConfigurableSentenceBuilder)?.updateSettings(
+                        settings.vocabularyLevel,
+                        settings.grammaticalPerson
+                    )
+                    textToSpeechManager.setVolume(settings.ttsVolume)
+                }
+            }
+        }
+    }
 
     fun selectCategory(categoryId: String) {
         _uiState.update { state ->

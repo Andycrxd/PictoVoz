@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.cima.data.repository.MediaPipeAiRepository
+import com.example.cima.data.repository.AdminPreferencesRepository
 import com.example.cima.data.repository.PictogramRepository
 import com.example.cima.domain.AiSentenceBuilder
 import com.example.cima.domain.TextToSpeechManager
@@ -11,7 +12,8 @@ import com.example.cima.domain.TextToSpeechManager
 class CommunicationViewModelFactory(
     private val context: Context,
     private val pictogramRepository: PictogramRepository,
-    private val textToSpeechManager: TextToSpeechManager
+    private val textToSpeechManager: TextToSpeechManager,
+    private val adminPreferencesRepository: AdminPreferencesRepository? = null
 ) : ViewModelProvider.Factory {
 
     @Suppress("UNCHECKED_CAST")
@@ -23,7 +25,8 @@ class CommunicationViewModelFactory(
             return CommunicationViewModel(
                 repository = pictogramRepository,
                 sentenceBuilder = sentenceBuilder,
-                textToSpeechManager = textToSpeechManager
+                textToSpeechManager = textToSpeechManager,
+                adminPreferencesRepository = adminPreferencesRepository
             ) as T
         }
         throw IllegalArgumentException("Clase ViewModel desconocida: ${modelClass.name}")
